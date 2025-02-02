@@ -1,0 +1,41 @@
+/* Ensure the root container takes up the full height */
+:root {
+  --footer-background-color: #333;
+  --footer-text-color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the layout spans the full viewport height */
+}
+
+/* Main content area */
+main {
+  flex: 1; /* Takes up remaining space between header and footer */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer styling */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+  height: 50px;
+  width: 100%;
+  margin-top: auto; /* Pushes the footer to the bottom */
+  font-size: 14px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
